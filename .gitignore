@@ -1,0 +1,240 @@
+
+# ==========================================
+# MEDIGUARD AI — GIT IGNORE
+# React + Vite + FastAPI + Python
+# ==========================================
+
+
+# ------------------------------------------
+# 1. NODE.JS / FRONTEND
+# ------------------------------------------
+
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+.npm/
+.pnpm-store/
+
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build and bundler caches
+.vite/
+.parcel-cache/
+.turbo/
+
+
+# ------------------------------------------
+# 2. PYTHON / FASTAPI BACKEND
+# ------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Python build files
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python version managers
+.python-version
+
+
+# ------------------------------------------
+# 3. PYTHON TESTING / LINTING
+# ------------------------------------------
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Test and coverage outputs
+coverage/
+coverage.xml
+nosetests.xml
+junit.xml
+
+
+# ------------------------------------------
+# 4. ENVIRONMENT VARIABLES / SECRETS
+# ------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+# Secret and private key files
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local secret folders
+secrets/
+private/
+
+
+# ------------------------------------------
+# 5. DATABASE FILES
+# ------------------------------------------
+
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+
+# Database temporary files
+*.db-journal
+*.sqlite-journal
+
+
+# ------------------------------------------
+# 6. DATASETS / LOCAL INGESTION
+# ------------------------------------------
+
+# Backend local ingestion files
+backend/ingestion_files/*
+
+# Keep the folder placeholder
+!backend/ingestion_files/.gitkeep
+
+# NOTE:
+# Do not ignore H4_Medication_Safety_Checker/
+# automatically. Check competition dataset
+# redistribution permissions before uploading.
+
+
+# ------------------------------------------
+# 7. GENERATED ARCHIVES
+# ------------------------------------------
+
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Generated submission archives are ignored.
+# Required source files inside submission/
+# remain trackable.
+
+
+# ------------------------------------------
+# 8. LOGS / TEMPORARY FILES
+# ------------------------------------------
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+
+# ------------------------------------------
+# 9. IDE / EDITOR FILES
+# ------------------------------------------
+
+.vscode/*
+!.vscode/extensions.json
+
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.code-workspace
+
+# Antigravity / editor temporary files
+.history/
+.cursor/
+.aider*
+.claude/
+
+
+# ------------------------------------------
+# 10. OPERATING SYSTEM FILES
+# ------------------------------------------
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+
+# ------------------------------------------
+# 11. FRONTEND TESTING / BROWSER AUTOMATION
+# ------------------------------------------
+
+playwright-report/
+test-results/
+blob-report/
+.nyc_output/
+
+
+# ------------------------------------------
+# 12. PYTHON EDITOR / COMPILATION FILES
+# ------------------------------------------
+
+*$py.class
+*.pyc
+*.pyo
+
+# Jupyter temporary checkpoints
+.ipynb_checkpoints/
+
+# H4 competition patient datasets
+/H4_Medication_Safety_Checker/data/patients_train.csv
+/H4_Medication_Safety_Checker/data/patients_test.csv
+/H4_Medication_Safety_Checker/data/train_labels.csv
+/H4_Medication_Safety_Checker/data/train_resolution.csv
+
+# Generated evaluation outputs
+/H4_Medication_Safety_Checker/submission_train/
+/H4_Medication_Safety_Checker/submission_test_run/
+
+# ------------------------------------------
+# END OF MEDIGUARD AI GITIGNORE
+# ------------------------------------------

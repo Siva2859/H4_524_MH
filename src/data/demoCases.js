@@ -1,0 +1,116 @@
+/**
+ * MediGuard AI - Interactive Demo Cases
+ * Deterministic Test Scenarios for Hackathon Demonstrations
+ * 
+ * Part of Talent AP Mega Hackathon 2026 - Problem Statement H4:
+ * The Medication Safety Second Pair of Eyes
+ * Team: Logic Legends | Team Leader: Achanta Siva Rama Krishna
+ */
+
+export const DEMO_CASES = [
+  {
+    id: "case-1",
+    title: "Case 1: Polypharmacy Anticoagulant Interaction",
+    subtitle: "Warfarin + Aspirin + Metformin (High Bleeding Hazard)",
+    description: "72-year-old male with AFib, Diabetes, and CAD. Demonstrates critical Drug-Drug Interaction (Warfarin + Aspirin bleeding synergy) and mild CKD monitoring.",
+    patientId: "SYN-PT-1042",
+    patientName: "Arthur Vance (Synthetic)",
+    clinicalContext: {
+      patientId: "SYN-PT-1042",
+      age: 72,
+      sex: "Male",
+      weight: 78,
+      eGfr: 52, // Moderate CKD
+      pregnancyStatus: "Not Applicable",
+      diagnoses: ["Atrial Fibrillation", "Type 2 Diabetes", "Coronary Artery Disease"]
+    },
+    medications: [
+      { genericName: "Warfarin", strength: "4 mg", dose: "4 mg", route: "Oral", frequency: "Once daily in evening" },
+      { genericName: "Aspirin", strength: "81 mg", dose: "81 mg", route: "Oral", frequency: "Once daily with food" },
+      { genericName: "Metformin", strength: "500 mg", dose: "500 mg", route: "Oral", frequency: "Twice daily with meals" }
+    ],
+    expectedHighlights: [
+      "Critical DDI: Warfarin + Aspirin bleeding risk (Rule DDI-WAR-ASA)",
+      "GI mucosa toxicity and platelet impairment synergy",
+      "Actionable prompt to review clinical need for dual antithrombotic therapy"
+    ]
+  },
+  {
+    id: "case-2",
+    title: "Case 2: Duplicate Therapy & Dual RAAS Blockade",
+    subtitle: "Lisinopril (ACEi) + Losartan (ARB) + Ibuprofen (NSAID)",
+    description: "64-year-old female with uncontrolled hypertension and joint pain. Demonstrates critical Dual RAAS Blockade duplication plus nephrotoxic triple whammy component.",
+    patientId: "SYN-PT-1088",
+    patientName: "Elena Rostova (Synthetic)",
+    clinicalContext: {
+      patientId: "SYN-PT-1088",
+      age: 64,
+      sex: "Female",
+      weight: 68,
+      eGfr: 44, // Moderate CKD Stage 3b
+      pregnancyStatus: "Negative",
+      diagnoses: ["Severe Hypertension", "Diabetic Nephropathy", "Osteoarthritis"]
+    },
+    medications: [
+      { genericName: "Lisinopril", strength: "20 mg", dose: "20 mg", route: "Oral", frequency: "Once daily" },
+      { genericName: "Losartan", strength: "50 mg", dose: "50 mg", route: "Oral", frequency: "Once daily" },
+      { genericName: "Ibuprofen", strength: "400 mg", dose: "400 mg", route: "Oral", frequency: "Three times daily PRN" }
+    ],
+    expectedHighlights: [
+      "Critical Duplicate Therapy: Dual RAAS blockade (Lisinopril + Losartan)",
+      "Severe Hyperkalemia & acute renal decline hazard",
+      "Guideline warning: Discontinue either ACEi or ARB"
+    ]
+  },
+  {
+    id: "case-3",
+    title: "Case 3: Uncertain Typo Drug + Severe Renal Contraindication",
+    subtitle: "Misspelled 'Metfornin' + eGFR 28 mL/min (MALA Risk)",
+    description: "69-year-old female with diabetic neuropathy. Contains typographic misspelling 'Metfornin' requiring human confirmation, plus severe renal impairment (eGFR 28 mL/min) triggering contraindication.",
+    patientId: "SYN-PT-5290",
+    patientName: "Sunita Patel (Synthetic)",
+    clinicalContext: {
+      patientId: "SYN-PT-5290",
+      age: 69,
+      sex: "Female",
+      weight: 58,
+      eGfr: 28, // Severe CKD Stage 4 (<30)
+      pregnancyStatus: "Unrecorded", // Missing clinical detail requiring manual review!
+      diagnoses: ["Type 2 Diabetes", "Chronic Kidney Disease Stage 4", "Diabetic Neuropathy"]
+    },
+    medications: [
+      { genericName: "Metfornin", strength: "1000 mg", dose: "1000 mg", route: "Oral", frequency: "Twice daily" },
+      { genericName: "Gabapentin", strength: "600 mg", dose: "600 mg", route: "Oral", frequency: "Three times daily" }
+    ],
+    expectedHighlights: [
+      "High Alert: Uncertain drug identity 'Metfornin' (Typo detected; requires clinician confirmation before silent mapping)",
+      "Critical Renal Alert: Metformin contraindicated at eGFR < 30 mL/min (Lactic Acidosis risk)",
+      "High Renal Alert: Gabapentin requires dose reduction at eGFR < 60 mL/min"
+    ]
+  },
+  {
+    id: "case-4",
+    title: "Case 4: Non-Interacting Regimen (Safe in Available Rules)",
+    subtitle: "Amoxicillin + Acetaminophen (Normal Renal Function)",
+    description: "41-year-old male with acute bacterial sinusitis and headache. Demonstrates clear output when no interactions or contraindications exist in the demo rule catalogue.",
+    patientId: "SYN-PT-6311",
+    patientName: "David K. O'Connor (Synthetic)",
+    clinicalContext: {
+      patientId: "SYN-PT-6311",
+      age: 41,
+      sex: "Male",
+      weight: 82,
+      eGfr: 98, // Normal renal function
+      pregnancyStatus: "Not Applicable",
+      diagnoses: ["Acute Sinusitis", "Tension Headache"]
+    },
+    medications: [
+      { genericName: "Amoxicillin", strength: "500 mg", dose: "500 mg", route: "Oral", frequency: "Three times daily" },
+      { genericName: "Acetaminophen", strength: "500 mg", dose: "500 mg", route: "Oral", frequency: "Every 6 hours PRN" }
+    ],
+    expectedHighlights: [
+      "No issues detected in the available demo rules",
+      "Explicit disclaimer: Does not guarantee absolute safety beyond the available catalogue"
+    ]
+  }
+];

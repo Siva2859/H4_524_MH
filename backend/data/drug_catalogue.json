@@ -1,0 +1,660 @@
+[
+  {
+    "id": "DRUG-001",
+    "genericName": "Warfarin",
+    "brandAliases": [
+      "Coumadin",
+      "Jantoven",
+      "Marevan"
+    ],
+    "drugClass": "Anticoagulant (Vitamin K Antagonist)",
+    "typicalDose": "2 mg - 10 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "No routine dose adjustment required; monitor INR closely in renal impairment",
+    "renalCutoff": null,
+    "pregnancyCategory": "X (Contraindicated - Teratogenic)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "INR (Target 2.0-3.0)",
+      "Signs of bleeding",
+      "CBC / Hemoglobin"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "11289",
+    "therapeuticCategory": "Cardiovascular / Hematology"
+  },
+  {
+    "id": "DRUG-002",
+    "genericName": "Aspirin",
+    "brandAliases": [
+      "Dispirin",
+      "Bayer Aspirin",
+      "Ecotrin",
+      "Empirin"
+    ],
+    "drugClass": "Antiplatelet / NSAID",
+    "typicalDose": "75 mg - 325 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Avoid in severe renal impairment (eGFR < 10 mL/min); cautionary if eGFR < 30 mL/min",
+    "renalCutoff": 30,
+    "pregnancyCategory": "D (Avoid in 3rd trimester)",
+    "pregnancyRisk": "Moderate",
+    "monitoringParameters": [
+      "Gastrointestinal bleeding",
+      "Renal function",
+      "Platelet function"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "1191",
+    "therapeuticCategory": "Cardiovascular / Analgesic"
+  },
+  {
+    "id": "DRUG-003",
+    "genericName": "Clopidogrel",
+    "brandAliases": [
+      "Plavix",
+      "Clopilet",
+      "Deplatt"
+    ],
+    "drugClass": "Antiplatelet (P2Y12 Inhibitor)",
+    "typicalDose": "75 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "No dosage adjustment necessary in mild-to-moderate renal impairment",
+    "renalCutoff": null,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Bleeding symptoms",
+      "CYP2C19 metabolizer status"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "32968",
+    "therapeuticCategory": "Cardiovascular / Hematology"
+  },
+  {
+    "id": "DRUG-004",
+    "genericName": "Metformin",
+    "brandAliases": [
+      "Glucophage",
+      "Glycomet",
+      "Fortamet",
+      "Glumetza"
+    ],
+    "drugClass": "Antidiabetic (Biguanide)",
+    "typicalDose": "500 mg - 1000 mg twice daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Contraindicated if eGFR < 30 mL/min (Lactic acidosis risk); max 1000 mg/day if eGFR 30-44 mL/min",
+    "renalCutoff": 30,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "eGFR / Serum Creatinine (at least annually)",
+      "HbA1c",
+      "Vitamin B12"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "6809",
+    "therapeuticCategory": "Endocrine / Metabolic"
+  },
+  {
+    "id": "DRUG-005",
+    "genericName": "Lisinopril",
+    "brandAliases": [
+      "Prinivil",
+      "Zestril",
+      "Lipril"
+    ],
+    "drugClass": "Antihypertensive (ACE Inhibitor)",
+    "typicalDose": "5 mg - 40 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Initial 2.5-5 mg/day if eGFR < 30 mL/min; monitor serum potassium and creatinine",
+    "renalCutoff": 30,
+    "pregnancyCategory": "D (Contraindicated in pregnancy - Fetal toxicity)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Blood pressure",
+      "Serum Potassium",
+      "eGFR / Creatinine"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "29046",
+    "therapeuticCategory": "Cardiovascular"
+  },
+  {
+    "id": "DRUG-006",
+    "genericName": "Losartan",
+    "brandAliases": [
+      "Cozaar",
+      "Losacar",
+      "Repace"
+    ],
+    "drugClass": "Antihypertensive (Angiotensin II Receptor Blocker - ARB)",
+    "typicalDose": "25 mg - 100 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "No initial dose reduction required; monitor for hyperkalemia and acute kidney decline",
+    "renalCutoff": 30,
+    "pregnancyCategory": "D (Contraindicated in pregnancy)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Blood pressure",
+      "Serum Potassium",
+      "eGFR"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "52175",
+    "therapeuticCategory": "Cardiovascular"
+  },
+  {
+    "id": "DRUG-007",
+    "genericName": "Ibuprofen",
+    "brandAliases": [
+      "Advil",
+      "Motrin",
+      "Brufen",
+      "Nurofen"
+    ],
+    "drugClass": "NSAID (Non-selective)",
+    "typicalDose": "200 mg - 800 mg 3-4 times daily as needed",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Avoid in moderate-to-severe renal impairment (eGFR < 30 mL/min); induces renal vasoconstriction",
+    "renalCutoff": 30,
+    "pregnancyCategory": "D (Avoid in 3rd trimester - premature ductus arteriosus closure)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Renal function",
+      "Blood pressure",
+      "GI ulceration symptoms"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "5640",
+    "therapeuticCategory": "Analgesic / Anti-inflammatory"
+  },
+  {
+    "id": "DRUG-008",
+    "genericName": "Naproxen",
+    "brandAliases": [
+      "Aleve",
+      "Naprosyn",
+      "Anaprox"
+    ],
+    "drugClass": "NSAID (Non-selective)",
+    "typicalDose": "250 mg - 500 mg twice daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Avoid in severe renal impairment (eGFR < 30 mL/min)",
+    "renalCutoff": 30,
+    "pregnancyCategory": "D (Avoid in 3rd trimester)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Renal function",
+      "GI symptoms",
+      "Blood pressure"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "7258",
+    "therapeuticCategory": "Analgesic / Anti-inflammatory"
+  },
+  {
+    "id": "DRUG-009",
+    "genericName": "Atorvastatin",
+    "brandAliases": [
+      "Lipitor",
+      "Atorva",
+      "Storvas"
+    ],
+    "drugClass": "Lipid-lowering (HMG-CoA Reductase Inhibitor / Statin)",
+    "typicalDose": "10 mg - 80 mg once daily at bedtime",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "No dose adjustment required for renal impairment",
+    "renalCutoff": null,
+    "pregnancyCategory": "X (Contraindicated in pregnancy)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Lipid panel",
+      "Liver enzymes (ALT/AST)",
+      "CPK if muscle pain reported"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "83367",
+    "therapeuticCategory": "Cardiovascular / Lipid"
+  },
+  {
+    "id": "DRUG-010",
+    "genericName": "Simvastatin",
+    "brandAliases": [
+      "Zocor",
+      "Simcard",
+      "Simvotin"
+    ],
+    "drugClass": "Lipid-lowering (HMG-CoA Reductase Inhibitor / Statin)",
+    "typicalDose": "10 mg - 40 mg once daily in evening",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Start at 5 mg/day if severe renal impairment (eGFR < 30 mL/min)",
+    "renalCutoff": 30,
+    "pregnancyCategory": "X (Contraindicated in pregnancy)",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Muscle symptoms",
+      "CPK",
+      "Liver enzymes"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "36567",
+    "therapeuticCategory": "Cardiovascular / Lipid"
+  },
+  {
+    "id": "DRUG-011",
+    "genericName": "Amlodipine",
+    "brandAliases": [
+      "Norvasc",
+      "Amlong",
+      "Amtas"
+    ],
+    "drugClass": "Antihypertensive (Calcium Channel Blocker - DHP)",
+    "typicalDose": "2.5 mg - 10 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "No dose adjustment required",
+    "renalCutoff": null,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Moderate",
+    "monitoringParameters": [
+      "Blood pressure",
+      "Peripheral edema"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "17767",
+    "therapeuticCategory": "Cardiovascular"
+  },
+  {
+    "id": "DRUG-012",
+    "genericName": "Omeprazole",
+    "brandAliases": [
+      "Prilosec",
+      "Omez",
+      "Losec"
+    ],
+    "drugClass": "Proton Pump Inhibitor (PPI)",
+    "typicalDose": "20 mg - 40 mg once daily before meals",
+    "routes": [
+      "Oral",
+      "IV"
+    ],
+    "renalAdjustment": "No dosage adjustment needed",
+    "renalCutoff": null,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Serum Magnesium (long-term use)",
+      "Bone mineral density"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "7646",
+    "therapeuticCategory": "Gastrointestinal"
+  },
+  {
+    "id": "DRUG-013",
+    "genericName": "Pantoprazole",
+    "brandAliases": [
+      "Protonix",
+      "Pantocid",
+      "Pan 40"
+    ],
+    "drugClass": "Proton Pump Inhibitor (PPI)",
+    "typicalDose": "40 mg once daily",
+    "routes": [
+      "Oral",
+      "IV"
+    ],
+    "renalAdjustment": "No dosage adjustment needed",
+    "renalCutoff": null,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Gastrointestinal symptoms",
+      "Electrolytes with prolonged therapy"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "40790",
+    "therapeuticCategory": "Gastrointestinal"
+  },
+  {
+    "id": "DRUG-014",
+    "genericName": "Spironolactone",
+    "brandAliases": [
+      "Aldactone",
+      "Spiron",
+      "Aldopur"
+    ],
+    "drugClass": "Potassium-Sparing Diuretic / Aldosterone Antagonist",
+    "typicalDose": "25 mg - 100 mg once daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Contraindicated in severe renal impairment (eGFR < 30 mL/min); severe hyperkalemia risk",
+    "renalCutoff": 30,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Moderate",
+    "monitoringParameters": [
+      "Serum Potassium (frequent)",
+      "eGFR",
+      "Blood pressure"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "9997",
+    "therapeuticCategory": "Cardiovascular / Renal"
+  },
+  {
+    "id": "DRUG-015",
+    "genericName": "Furosemide",
+    "brandAliases": [
+      "Lasix",
+      "Frusid"
+    ],
+    "drugClass": "Loop Diuretic",
+    "typicalDose": "20 mg - 80 mg once or twice daily",
+    "routes": [
+      "Oral",
+      "IV"
+    ],
+    "renalAdjustment": "May require higher doses in renal impairment to achieve diuretic response",
+    "renalCutoff": null,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Moderate",
+    "monitoringParameters": [
+      "Fluid balance",
+      "Serum Potassium / Sodium",
+      "Renal function"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "4603",
+    "therapeuticCategory": "Cardiovascular / Renal"
+  },
+  {
+    "id": "DRUG-016",
+    "genericName": "Gabapentin",
+    "brandAliases": [
+      "Neurontin",
+      "Gabapin"
+    ],
+    "drugClass": "Anticonvulsant / Neuropathic Pain Agent",
+    "typicalDose": "300 mg - 900 mg three times daily",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Extensively renally cleared: Reduce dose if eGFR < 60 mL/min (e.g. 200-700 mg BID for eGFR 30-59)",
+    "renalCutoff": 60,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Moderate",
+    "monitoringParameters": [
+      "Sedation / CNS depression",
+      "eGFR tracking",
+      "Fall risk"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "25480",
+    "therapeuticCategory": "Neurological / Pain"
+  },
+  {
+    "id": "DRUG-017",
+    "genericName": "Enoxaparin",
+    "brandAliases": [
+      "Lovenox",
+      "Clexane"
+    ],
+    "drugClass": "Low Molecular Weight Heparin (Anticoagulant)",
+    "typicalDose": "1 mg/kg every 12 hours or 1.5 mg/kg once daily",
+    "routes": [
+      "Subcutaneous",
+      "IV"
+    ],
+    "renalAdjustment": "Severe renal impairment (eGFR < 30 mL/min): Reduce dose to 1 mg/kg once daily",
+    "renalCutoff": 30,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Anti-Xa levels in renal impairment",
+      "Platelet count (HIT risk)",
+      "Bleeding"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "67108",
+    "therapeuticCategory": "Hematology"
+  },
+  {
+    "id": "DRUG-018",
+    "genericName": "Amoxicillin",
+    "brandAliases": [
+      "Amoxil",
+      "Moxatag",
+      "Novamox"
+    ],
+    "drugClass": "Antibiotic (Aminopenicillin)",
+    "typicalDose": "250 mg - 500 mg every 8 hours or 875 mg every 12 hours",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "If eGFR 10-30 mL/min: 250-500 mg every 12 hours; if eGFR < 10: 250-500 mg every 24 hours",
+    "renalCutoff": 30,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Hypersensitivity / Rash",
+      "Signs of infection resolution"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "723",
+    "therapeuticCategory": "Anti-infective"
+  },
+  {
+    "id": "DRUG-019",
+    "genericName": "Amoxicillin / Clavulanate",
+    "brandAliases": [
+      "Augmentin",
+      "Clavam",
+      "Amoxyclav"
+    ],
+    "drugClass": "Antibiotic (Penicillin + Beta-lactamase Inhibitor)",
+    "typicalDose": "625 mg - 1000 mg every 12 hours",
+    "routes": [
+      "Oral",
+      "IV"
+    ],
+    "renalAdjustment": "Avoid 875/125 mg formulation if eGFR < 30 mL/min; use 500/125 mg BID",
+    "renalCutoff": 30,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Hepatic function in prolonged use",
+      "Diarrhea",
+      "Hypersensitivity"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "6185",
+    "therapeuticCategory": "Anti-infective"
+  },
+  {
+    "id": "DRUG-020",
+    "genericName": "Acetaminophen",
+    "brandAliases": [
+      "Paracetamol",
+      "Tylenol",
+      "Panadol",
+      "Calpol",
+      "Crocin"
+    ],
+    "drugClass": "Analgesic / Antipyretic",
+    "typicalDose": "500 mg - 1000 mg every 4-6 hours (Max 4000 mg/24h; 2000-3000 mg in chronic liver disease)",
+    "routes": [
+      "Oral",
+      "IV",
+      "Rectal"
+    ],
+    "renalAdjustment": "Increase dosing interval to every 6-8 hours if eGFR < 30 mL/min",
+    "renalCutoff": 30,
+    "pregnancyCategory": "B",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Cumulative 24-hour total dose (Hepatotoxicity warning)",
+      "Liver function"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "161",
+    "therapeuticCategory": "Analgesic"
+  },
+  {
+    "id": "DRUG-021",
+    "genericName": "Methotrexate",
+    "brandAliases": [
+      "Trexall",
+      "Rheumatrex",
+      "Folitrax"
+    ],
+    "drugClass": "Antirheumatic / Antineoplastic (Antifolate)",
+    "typicalDose": "7.5 mg - 25 mg ONCE WEEKLY (Never daily for arthritis)",
+    "routes": [
+      "Oral",
+      "Subcutaneous",
+      "IM"
+    ],
+    "renalAdjustment": "Contraindicated if eGFR < 30 mL/min (marked accumulation and bone marrow suppression)",
+    "renalCutoff": 30,
+    "pregnancyCategory": "X (Strictly Contraindicated - Teratogenic / Abortifacient)",
+    "pregnancyRisk": "Critical",
+    "monitoringParameters": [
+      "CBC with diff",
+      "Liver function (ALT/AST)",
+      "Renal function",
+      "Weekly dosing schedule verification"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "6851",
+    "therapeuticCategory": "Immunology / Rheumatology"
+  },
+  {
+    "id": "DRUG-022",
+    "genericName": "Propranolol",
+    "brandAliases": [
+      "Inderal",
+      "Ciplar"
+    ],
+    "drugClass": "Antihypertensive (Non-selective Beta Blocker)",
+    "typicalDose": "40 mg - 160 mg daily in divided doses",
+    "routes": [
+      "Oral",
+      "IV"
+    ],
+    "renalAdjustment": "Caution in severe renal impairment; clearance mainly hepatic",
+    "renalCutoff": null,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Moderate",
+    "monitoringParameters": [
+      "Heart rate",
+      "Blood pressure",
+      "Bronchospasm signs (Asthma/COPD contraindication)"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "8787",
+    "therapeuticCategory": "Cardiovascular"
+  },
+  {
+    "id": "DRUG-023",
+    "genericName": "Diazepam",
+    "brandAliases": [
+      "Valium",
+      "Calmpose"
+    ],
+    "drugClass": "Anxiolytic / Sedative (Benzodiazepine)",
+    "typicalDose": "2 mg - 10 mg 2-4 times daily as needed",
+    "routes": [
+      "Oral",
+      "IV"
+    ],
+    "renalAdjustment": "Caution in renal impairment; risk of active metabolite accumulation and over-sedation",
+    "renalCutoff": 30,
+    "pregnancyCategory": "D",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Respiratory rate",
+      "Sedation level",
+      "Cognitive impairment / fall risk"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "3322",
+    "therapeuticCategory": "Psychiatric / Neurological"
+  },
+  {
+    "id": "DRUG-024",
+    "genericName": "Lorazepam",
+    "brandAliases": [
+      "Ativan",
+      "Trapex",
+      "Larpose"
+    ],
+    "drugClass": "Anxiolytic / Sedative (Benzodiazepine)",
+    "typicalDose": "0.5 mg - 2 mg 2-3 times daily",
+    "routes": [
+      "Oral",
+      "IV",
+      "SL"
+    ],
+    "renalAdjustment": "No active renal metabolites; preferred over diazepam in mild renal impairment with caution",
+    "renalCutoff": null,
+    "pregnancyCategory": "D",
+    "pregnancyRisk": "High",
+    "monitoringParameters": [
+      "Sedation score",
+      "Respiratory depression",
+      "Fall risk"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "6470",
+    "therapeuticCategory": "Psychiatric / Neurological"
+  },
+  {
+    "id": "DRUG-025",
+    "genericName": "Potassium Chloride",
+    "brandAliases": [
+      "K-Dur",
+      "K-Lor",
+      "Potclor"
+    ],
+    "drugClass": "Electrolyte Supplement",
+    "typicalDose": "20 mEq - 40 mEq daily in divided doses",
+    "routes": [
+      "Oral"
+    ],
+    "renalAdjustment": "Avoid or use with extreme caution in moderate-to-severe renal impairment (eGFR < 30 mL/min)",
+    "renalCutoff": 30,
+    "pregnancyCategory": "C",
+    "pregnancyRisk": "Low",
+    "monitoringParameters": [
+      "Serum Potassium",
+      "ECG",
+      "eGFR"
+    ],
+    "status": "Demo Reference v1.2",
+    "rxNormId": "8591",
+    "therapeuticCategory": "Electrolytes / Nutrition"
+  }
+]

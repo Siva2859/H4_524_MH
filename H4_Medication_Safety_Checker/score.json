@@ -1,0 +1,76 @@
+{
+  "primary_score": 0.873083,
+  "score_range": "0 (worst) to 1 (best)",
+  "components": {
+    "serious_recall": 0.965193,
+    "near_miss_serious_recall": 0.9,
+    "precision_all": 0.963781,
+    "graded_recall_non_minor": 0.969454,
+    "resolution_accuracy": 0.985034,
+    "base_score": 0.958817,
+    "noise_alerts_per_patient": 0.178833,
+    "alert_fatigue_multiplier": 0.910583
+  },
+  "counts": {
+    "patients_scored": 1500,
+    "true_issues": 3241,
+    "true_serious": 1063,
+    "true_near_miss": 90,
+    "alerts_scored": 3258,
+    "alerts_matched": 3140,
+    "false_alerts": 118,
+    "alerts_on_minor_issues": 601,
+    "alerts_ignored_unknown_patient": 0,
+    "tokens_scored": 9087,
+    "tokens_without_prediction": 0,
+    "patients_without_resolution_rows": 0
+  },
+  "per_issue_type": {
+    "interaction": {
+      "serious_true": 582,
+      "serious_recall": 0.9674,
+      "alerts": 1846,
+      "alerts_matched": 1771
+    },
+    "duplicate_therapy": {
+      "serious_true": 213,
+      "serious_recall": 0.9624,
+      "alerts": 511,
+      "alerts_matched": 493
+    },
+    "renal_dose": {
+      "serious_true": 119,
+      "serious_recall": 0.9748,
+      "alerts": 695,
+      "alerts_matched": 685
+    },
+    "contraindication": {
+      "serious_true": 149,
+      "serious_recall": 0.953,
+      "alerts": 206,
+      "alerts_matched": 191
+    }
+  },
+  "resolution_accuracy_misspelled": 0.923426,
+  "resolution_accuracy_by_token_kind": {
+    "abbreviation": 1.0,
+    "brand_variant": 0.9905,
+    "exact_brand": 0.9976,
+    "generic": 1.0,
+    "generic_combo": 0.9879,
+    "misspelled_brand": 0.9398,
+    "misspelled_generic": 0.9062,
+    "misspelled_truncated": 0.8516,
+    "non_drug": 1.0,
+    "synonym": 1.0
+  },
+  "constants": {
+    "W_SERIOUS_RECALL": 0.4,
+    "W_NEAR_MISS_RECALL": 0.15,
+    "W_PRECISION": 0.15,
+    "W_GRADED_RECALL": 0.15,
+    "W_RESOLUTION": 0.15,
+    "NOISE_TOLERANCE": 2.0,
+    "MINOR_NOISE_WEIGHT": 0.25
+  }
+}

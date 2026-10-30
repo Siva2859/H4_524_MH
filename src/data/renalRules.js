@@ -1,0 +1,116 @@
+/**
+ * MediGuard AI - Illustrative Kidney-Related / Renal Dose Concern Rules
+ * SYNTHETIC / DEMO RULES - Not clinically validated.
+ * 
+ * Part of Talent AP Mega Hackathon 2026 - Problem Statement H4:
+ * The Medication Safety Second Pair of Eyes
+ * Team: Logic Legends | Team Leader: Achanta Siva Rama Krishna
+ */
+
+export const RENAL_RULES = [
+  {
+    id: "RULE-REN-001",
+    ruleCode: "REN-MET-30",
+    drugName: "Metformin",
+    eGfrThreshold: 30,
+    comparator: "lessThan",
+    severity: "Critical",
+    title: "Contraindicated in Severe Renal Impairment: Metformin (eGFR < 30 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "Metformin is eliminated unchanged by tubular secretion and glomerular filtration. At eGFR < 30 mL/min/1.73m², significant drug accumulation occurs, markedly elevating the risk of life-threatening Metformin-Associated Lactic Acidosis (MALA), which carries up to 50% mortality.",
+    evidence: "Demo Reference REF-REN-201 (Illustrative synthetic summary of FDA / EMA boxed warning guidance on biguanides in renal failure).",
+    confidence: "98% (Confirmed threshold match against synthetic patient eGFR)",
+    limitations: "Illustrative demo rule: Assumes stable chronic kidney disease (CKD); in acute kidney injury (AKI) or sepsis, risk is exacerbated further.",
+    suggestedAction: "Discontinue Metformin immediately. Check arterial blood gas / serum lactate if patient is symptomatic. Transition glycemic control to insulin or renally safe alternatives (e.g. Linagliptin)."
+  },
+  {
+    id: "RULE-REN-002",
+    ruleCode: "REN-MET-45",
+    drugName: "Metformin",
+    eGfrThreshold: 45,
+    comparator: "lessThan",
+    severity: "Moderate",
+    title: "Dose Limitation in Moderate Renal Impairment: Metformin (eGFR 30 - 44 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "In moderate renal impairment (eGFR 30-44 mL/min), metformin clearance is reduced. Initiating therapy is not recommended, and existing therapy must not exceed 1000 mg total daily dose.",
+    evidence: "Demo Reference REF-REN-202 (Illustrative renal pharmacokinetics guideline).",
+    confidence: "96% (Confirmed threshold match)",
+    limitations: "Illustrative demo rule: Applies when eGFR is between 30 and 44 mL/min.",
+    suggestedAction: "Cap total daily dose at 500 mg BID (1000 mg/day). Schedule renal function testing every 3 to 6 months."
+  },
+  {
+    id: "RULE-REN-003",
+    ruleCode: "REN-ENOX-30",
+    drugName: "Enoxaparin",
+    eGfrThreshold: 30,
+    comparator: "lessThan",
+    severity: "High",
+    title: "Dose Reduction Required: Enoxaparin in Severe Renal Impairment (eGFR < 30 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "Enoxaparin is predominantly renally cleared. In severe renal insufficiency (eGFR < 30 mL/min), clearance is decreased by 30-44%, leading to elevated anti-Xa exposure and high bleeding complications.",
+    evidence: "Demo Reference REF-REN-203 (Illustrative package insert and CHEST guidelines).",
+    confidence: "97% (Confirmed threshold match)",
+    limitations: "Illustrative demo rule: Does not account for therapeutic anti-Xa peak blood level monitoring.",
+    suggestedAction: "Reduce therapeutic dose from 1 mg/kg Q12H to 1 mg/kg once daily (Q24H), or consider switching to Unfractionated Heparin (UFH) with aPTT monitoring."
+  },
+  {
+    id: "RULE-REN-004",
+    ruleCode: "REN-GABA-60",
+    drugName: "Gabapentin",
+    eGfrThreshold: 60,
+    comparator: "lessThan",
+    severity: "High",
+    title: "Renal Clearance Impairment: Gabapentin Dose Adjustment Required (eGFR < 60 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "Gabapentin is eliminated exclusively by renal excretion. When eGFR drops below 60 mL/min, clearance declines linearly, causing toxic accumulation leading to severe sedation, respiratory depression, myoclonus, and coma.",
+    evidence: "Demo Reference REF-REN-204 (Illustrative nephrology dosing compendium).",
+    confidence: "95% (Confirmed threshold match)",
+    limitations: "Illustrative demo rule: Individual tolerance varies; dosage must match exact creatinine clearance bracket.",
+    suggestedAction: "Adjust dose based on renal bracket (e.g. eGFR 30-59: 200-700 mg BID; eGFR 15-29: 200-700 mg once daily). Monitor for excessive sedation."
+  },
+  {
+    id: "RULE-REN-005",
+    ruleCode: "REN-SPIRON-30",
+    drugName: "Spironolactone",
+    eGfrThreshold: 30,
+    comparator: "lessThan",
+    severity: "Critical",
+    title: "Severe Hyperkalemia Risk: Spironolactone Contraindicated (eGFR < 30 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "At eGFR < 30 mL/min, intrinsic renal potassium excretion is severely curtailed. Potassium-sparing diuretics trigger refractory, life-threatening hyperkalemia and acute-on-chronic kidney injury.",
+    evidence: "Demo Reference REF-REN-205 (Illustrative cardiology consensus).",
+    confidence: "98% (Confirmed threshold match)",
+    limitations: "Illustrative demo rule: Patient's baseline serum potassium level must also be checked immediately.",
+    suggestedAction: "Discontinue Spironolactone. Check urgent serum electrolyte panel and ECG if potassium elevation is suspected."
+  },
+  {
+    id: "RULE-REN-006",
+    ruleCode: "REN-NSAID-30",
+    drugName: "Ibuprofen",
+    eGfrThreshold: 30,
+    comparator: "lessThan",
+    severity: "High",
+    title: "Nephrotoxic Risk: NSAID Contraindicated in Advanced Renal Impairment (eGFR < 30 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "NSAIDs block prostaglandin-mediated afferent arteriolar vasodilation, precipitating acute hemodynamic renal failure and fluid retention in patients with pre-existing renal compromise.",
+    evidence: "Demo Reference REF-REN-206 (Illustrative KDIGO clinical practice guideline).",
+    confidence: "96% (Confirmed threshold match)",
+    limitations: "Illustrative demo rule: Applies to all non-selective oral NSAIDs.",
+    suggestedAction: "Avoid NSAIDs. Use topical alternatives or non-nephrotoxic analgesics under clinical monitoring."
+  },
+  {
+    id: "RULE-REN-007",
+    ruleCode: "REN-MTX-30",
+    drugName: "Methotrexate",
+    eGfrThreshold: 30,
+    comparator: "lessThan",
+    severity: "Critical",
+    title: "Fatal Toxicity Hazard: Methotrexate Contraindicated (eGFR < 30 mL/min)",
+    category: "Kidney-Related Dose Concern",
+    clinicalRationale: "Methotrexate is 80-90% eliminated via renal excretion. Severe renal impairment leads to dramatic prolongation of elimination half-life, profound marrow aplasia, and multi-organ failure.",
+    evidence: "Demo Reference REF-REN-207 (Illustrative rheumatology drug safety alert).",
+    confidence: "99% (Confirmed threshold match)",
+    limitations: "Illustrative demo rule: Applies to both oral and parenteral low-dose rheumatologic regimens.",
+    suggestedAction: "Strict contraindication. Withhold methotrexate and coordinate with nephrology and rheumatology."
+  }
+];

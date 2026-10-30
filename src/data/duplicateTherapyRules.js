@@ -1,0 +1,84 @@
+/**
+ * MediGuard AI - Illustrative Duplicate Therapy Rules
+ * SYNTHETIC / DEMO RULES - Not clinically validated.
+ * 
+ * Part of Talent AP Mega Hackathon 2026 - Problem Statement H4:
+ * The Medication Safety Second Pair of Eyes
+ * Team: Logic Legends | Team Leader: Achanta Siva Rama Krishna
+ */
+
+export const DUPLICATE_THERAPY_RULES = [
+  {
+    id: "RULE-DUP-001",
+    ruleCode: "DUP-NSAID",
+    title: "Duplicate NSAID Therapy Detected",
+    category: "Duplicate Therapy",
+    severity: "High",
+    targetClass: "NSAID (Non-selective)",
+    drugsInvolvedInDemo: ["Ibuprofen", "Naproxen", "Aspirin"],
+    clinicalRationale: "Coadministration of multiple systemic non-steroidal anti-inflammatory drugs (NSAIDs) yields negligible incremental analgesic efficacy while exponentially multiplying the risks of gastrointestinal bleeding, ulceration, and acute renal vasoconstriction.",
+    evidence: "Demo Reference REF-DUP-101 (Illustrative clinical pharmacology consensus on therapeutic duplication).",
+    confidence: "99% (Confirmed pharmacologic class match)",
+    limitations: "Illustrative demo rule: Assumes systemic analgesic dosages; cardioprotective low-dose aspirin is assessed under DDI rules when paired with anti-inflammatory doses.",
+    suggestedAction: "Consolidate to a single NSAID at the lowest effective dose for the shortest necessary duration, or substitute with non-NSAID analgesic."
+  },
+  {
+    id: "RULE-DUP-002",
+    ruleCode: "DUP-RAAS",
+    title: "Dual RAAS Blockade (ACE Inhibitor + ARB)",
+    category: "Duplicate Therapy",
+    severity: "Critical",
+    targetClasses: [
+      "Antihypertensive (ACE Inhibitor)",
+      "Antihypertensive (Angiotensin II Receptor Blocker - ARB)"
+    ],
+    drugsInvolvedInDemo: ["Lisinopril", "Losartan"],
+    clinicalRationale: "Simultaneous administration of an ACE inhibitor and an Angiotensin Receptor Blocker produces dual renin-angiotensin-aldosterone blockade. Clinical landmark trials (e.g. ONTARGET / VA NEPHRON-D) demonstrate no added cardiovascular benefit, but significantly higher incidence of syncope, severe hyperkalemia, and progressive renal failure.",
+    evidence: "Demo Reference REF-DUP-102 (Illustrative major trial and clinical guideline consensus).",
+    confidence: "99% (Confirmed pharmacologic class match)",
+    limitations: "Illustrative demo rule: Historically explored in refractory proteinuria, but universally discouraged in modern clinical guidelines.",
+    suggestedAction: "Discontinue one agent. Select either the ACE inhibitor or the ARB based on patient tolerance (e.g. presence of bradykinin-mediated cough)."
+  },
+  {
+    id: "RULE-DUP-003",
+    ruleCode: "DUP-BENZO",
+    title: "Duplicate Benzodiazepine / Sedative Therapy",
+    category: "Duplicate Therapy",
+    severity: "High",
+    targetClass: "Anxiolytic / Sedative (Benzodiazepine)",
+    drugsInvolvedInDemo: ["Diazepam", "Lorazepam"],
+    clinicalRationale: "Concurrent use of two benzodiazepine receptor agonists leads to additive central nervous system depression, profound sedation, severe cognitive impairment, respiratory depression, and dramatically increased fall/fracture risk in vulnerable patients.",
+    evidence: "Demo Reference REF-DUP-103 (Illustrative psychopharmacology safety criteria / Beers Criteria synthetic model).",
+    confidence: "98% (Confirmed pharmacologic class match)",
+    limitations: "Illustrative demo rule: Does not account for monitored inpatient cross-tapering protocols.",
+    suggestedAction: "Review indication. Rationalize to a single agent with appropriate half-life and develop a gradual tapering schedule if chronic use is detected."
+  },
+  {
+    id: "RULE-DUP-004",
+    ruleCode: "DUP-STATIN",
+    title: "Duplicate Statin (HMG-CoA Reductase Inhibitor) Therapy",
+    category: "Duplicate Therapy",
+    severity: "High",
+    targetClass: "Lipid-lowering (HMG-CoA Reductase Inhibitor / Statin)",
+    drugsInvolvedInDemo: ["Atorvastatin", "Simvastatin"],
+    clinicalRationale: "Prescribing two distinct statins simultaneously is almost always an accidental transition overlap. Does not improve lipid lowering and markedly increases hepatic transaminase elevation and rhabdomyolysis.",
+    evidence: "Demo Reference REF-DUP-104 (Illustrative lipid guidelines).",
+    confidence: "99% (Confirmed pharmacologic class match)",
+    limitations: "Illustrative demo rule: None. Concurrent dual statin use is universally unindicated.",
+    suggestedAction: "Verify prescription records. Immediately discontinue the older or redundant statin."
+  },
+  {
+    id: "RULE-DUP-005",
+    ruleCode: "DUP-PPI",
+    title: "Duplicate Proton Pump Inhibitor (PPI) Therapy",
+    category: "Duplicate Therapy",
+    severity: "Moderate",
+    targetClass: "Proton Pump Inhibitor (PPI)",
+    drugsInvolvedInDemo: ["Omeprazole", "Pantoprazole"],
+    clinicalRationale: "Concurrent therapy with two PPIs reflects prescribing duplication without additional acid suppression benefit, increasing long-term risks of hypomagnesemia, Clostridium difficile diarrhea, and bone density reduction.",
+    evidence: "Demo Reference REF-DUP-105 (Illustrative GI pharmacology reference).",
+    confidence: "98% (Confirmed pharmacologic class match)",
+    limitations: "Illustrative demo rule: Omits acute hospital IV-to-oral step-down handover windows.",
+    suggestedAction: "Deprescribe redundant PPI and maintain single agent at indicated dosage."
+  }
+];
